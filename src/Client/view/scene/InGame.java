@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Client.view.scene;
 
 import Client.RunClient;
@@ -27,10 +22,6 @@ import javax.swing.text.DefaultCaret;
 import Shared.helper.CountDownTimer;
 import Shared.helper.CustumDateTimeFormatter;
 
-/**
- *
- * @author Hoang Tran < hoang at 99.hoangtran@gmail.com >
- */
 public class InGame extends javax.swing.JFrame {
 
     final ImageIcon p1Icon = new ImageIcon(Avatar.ASSET_PATH + "icons8_round_24px.png");

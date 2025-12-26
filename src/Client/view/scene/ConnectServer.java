@@ -8,10 +8,6 @@ package Client.view.scene;
 import Client.RunClient;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Hoang Tran < hoang at 99.hoangtran@gmail.com >
- */
 public class ConnectServer extends javax.swing.JFrame {
 
     /**

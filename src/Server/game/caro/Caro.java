@@ -1,20 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Server.game.caro;
 
+import Server.game.GameLogic;
 import Shared.helper.CountDownTimer;
-import java.util.ArrayList;
 import Shared.helper.Line;
 import Shared.helper.Point;
-import Server.game.GameLogic;
+import java.util.ArrayList;
 
-/**
- *
- * @author Hoang Tran < hoang at 99.hoangtran@gmail.com >
- */
 public class Caro extends GameLogic {
 
     public static final int ROW = 16, COL = 16;

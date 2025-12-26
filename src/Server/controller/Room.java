@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Server.controller;
 
-import Server.RunServer;
 import Server.DB.Layers.BUS.GameMatchBUS;
 import Server.DB.Layers.DTO.GameMatch;
+import Server.RunServer;
 import Server.game.GameLogic;
 import Server.game.caro.Caro;
 import Server.game.caro.History;
@@ -16,10 +11,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.concurrent.Callable;
 
-/**
- *
- * @author Hoang Tran < hoang at 99.hoangtran@gmail.com >
- */
 public class Room {
 
     String id;

@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `gamematch` (
   `PlayerID1` int(11) NOT NULL,
   `PlayerID2` int(11) NOT NULL,
   `WinnerID` int(11) DEFAULT NULL,
-  `PlayTime` int(11) NOT NULL,
+  `PlayTime` int(11) NOT NULL, 
   `TotalMove` int(11) NOT NULL,
   `StartedTime` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `Chat` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,

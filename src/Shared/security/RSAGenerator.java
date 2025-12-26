@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Shared.security;
 
 import java.io.File;
@@ -14,10 +9,6 @@ import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
 import java.security.PublicKey;
 
-/**
- *
- * @author Hoang Tran < hoang at 99.hoangtran@gmail.com >
- */
 // https://stackjava.com/demo/code-java-vi-du-ma-hoa-giai-ma-voi-rsa.html
 public class RSAGenerator {
 
