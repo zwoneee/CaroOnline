@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package server.controller;
+package Server.controller;
 
 import java.util.ArrayList;
 

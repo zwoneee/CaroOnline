@@ -3,14 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package client.controller;
+package Client.controller;
 
-import client.RunClient;
-import client.model.ChatItem;
-import client.model.PlayerInGame;
-import client.model.ProfileData;
-import client.view.scene.MainMenu;
-import shared.helper.MyHash;
+import Client.RunClient;
+import Client.model.ChatItem;
+import Client.model.PlayerInGame;
+import Client.model.ProfileData;
+import Client.view.scene.MainMenu;
+import Shared.constant.StreamData;
+import Shared.helper.MyHash;
+import Shared.security.AES;
+import Shared.security.RSA;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -22,10 +25,6 @@ import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import server.game.caro.History;
-import shared.constant.StreamData;
-import shared.security.AES;
-import shared.security.RSA;
 
 /**
  *
@@ -315,7 +314,31 @@ public class SocketHandler {
     }
 
     private void onReceiveCreateRoom(String received) {
+        String[] splitted = received.split(";");
+        String status = splitted[1];
 
+        if (status.equals("failed")) {
+            String failedMsg = splitted[2];
+            JOptionPane.showMessageDialog(RunClient.mainMenuScene, failedMsg, "Lỗi", JOptionPane.ERROR_MESSAGE);
+        } else if (status.equals("success")) {
+            // server returns: CREATE_ROOM;success;roomId
+            String roomId = splitted[2];
+
+            // save room id
+            this.roomId = roomId;
+
+            // change scene
+            RunClient.closeScene(RunClient.SceneName.MAINMENU);
+            RunClient.openScene(RunClient.SceneName.INGAME);
+            RunClient.inGameScene.setTitle("Phòng #" + roomId);
+
+            // get room data
+            dataRoom(roomId);
+        }
+    }
+
+    public void createRoom() {
+        sendData(StreamData.Type.CREATE_ROOM.name());
     }
 
     private void onReceiveJoinRoom(String received) {

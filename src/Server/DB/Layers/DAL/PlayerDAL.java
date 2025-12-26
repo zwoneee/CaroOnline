@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package server.db.layers.DAL;
+package Server.DB.Layers.DAL;
 
-import server.db.layers.DBConnector.MysqlConnector;
-import server.db.layers.DTO.Player;
+import Server.DB.Layers.DBConnector.MysqlConnector;
+import Server.DB.Layers.DTO.Player;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -31,6 +31,11 @@ public class PlayerDAL {
         connector = new MysqlConnector();
 
         try {
+            if (!connector.checkConnection()) {
+                Logger.getLogger(PlayerDAL.class.getName()).log(Level.SEVERE, "Không thể kết nối đến cơ sở dữ liệu");
+                return result;
+            }
+
             String qry = "SELECT * FROM Player;";
             PreparedStatement stm = connector.getConnection().prepareStatement(qry);
             ResultSet rs = connector.sqlQry(stm);
@@ -70,6 +75,11 @@ public class PlayerDAL {
         connector = new MysqlConnector();
 
         try {
+            if (!connector.checkConnection()) {
+                Logger.getLogger(PlayerDAL.class.getName()).log(Level.SEVERE, "Không thể kết nối đến cơ sở dữ liệu");
+                return false;
+            }
+
             String qry = "INSERT INTO Player(Email,Password,Avatar,Name,Gender,YearOfBirth,Score,MatchCount,WinCount,LoseCount,CurrentStreak,Blocked) "
                     + "VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
 
@@ -102,6 +112,11 @@ public class PlayerDAL {
         connector = new MysqlConnector();
 
         try {
+            if (!connector.checkConnection()) {
+                Logger.getLogger(PlayerDAL.class.getName()).log(Level.SEVERE, "Không thể kết nối đến cơ sở dữ liệu");
+                return false;
+            }
+
             String qry = "UPDATE Player SET "
                     + "Email=?,"
                     + "Password=?,"
@@ -148,6 +163,11 @@ public class PlayerDAL {
         connector = new MysqlConnector();
 
         try {
+            if (!connector.checkConnection()) {
+                Logger.getLogger(PlayerDAL.class.getName()).log(Level.SEVERE, "Không thể kết nối đến cơ sở dữ liệu");
+                return false;
+            }
+
             String qry = "DELETE FROM player WHERE ID=?";
 
             PreparedStatement stm = connector.getConnection().prepareStatement(qry);

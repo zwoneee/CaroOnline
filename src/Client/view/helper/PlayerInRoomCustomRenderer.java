@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package client.view.helper;
+package Client.view.helper;
 
-import client.model.PlayerInGame;
+import Client.model.PlayerInGame;
+import Shared.constant.Avatar;
 import java.awt.Component;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.ListCellRenderer;
-import shared.constant.Avatar;
 
 /**
  *

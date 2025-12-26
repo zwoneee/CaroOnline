@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package client.view.scene;
+package Client.view.scene;
 
-import client.RunClient;
-import client.view.helper.LookAndFeel;
+import Client.RunClient;
+import Client.view.helper.LookAndFeel;
 import java.util.Vector;
 import java.util.concurrent.Callable;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import shared.helper.CountDownTimer;
+import Shared.helper.CountDownTimer;
 
 /**
  *
@@ -224,6 +224,11 @@ public class MainMenu extends javax.swing.JFrame {
 
         btnCreateRoom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_add_24px.png"))); // NOI18N
         btnCreateRoom.setText("Tạo phòng");
+        btnCreateRoom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateRoomActionPerformed(evt);
+            }
+        });
 
         btnFindMatch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/client/view/asset/icons8_circled_play_24px.png"))); // NOI18N
         btnFindMatch.setText("Tìm trận");
@@ -542,6 +547,10 @@ public class MainMenu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCreateRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateRoomActionPerformed
+        RunClient.socketHandler.createRoom();
+    }//GEN-LAST:event_btnCreateRoomActionPerformed
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         RunClient.socketHandler.logout();

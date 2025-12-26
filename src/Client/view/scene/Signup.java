@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package client.view.scene;
+package Client.view.scene;
 
-import client.RunClient;
-import client.view.helper.Validation;
-import shared.constant.Avatar;
+import Client.RunClient;
+import Client.view.helper.Validation;
+import Shared.constant.Avatar;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 

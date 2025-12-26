@@ -1,0 +1,46 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "RunServer",
+      "request": "launch",
+      "mainClass": "Server.RunServer",
+      "projectName": "CaroOnline_SocketJava"
+    },
+    {
+      "type": "java",
+      "name": "RunClient",
+      "request": "launch",
+      "mainClass": "Client.RunClient",
+      "projectName": "CaroOnline_SocketJava"
+    },
+    {
+      "type": "java",
+      "name": "RunClient",
+      "request": "launch",
+      "mainClass": "Client.RunClient",
+      "projectName": "CaroOnline_SocketJava_bb2410a3"
+    },
+    {
+      "type": "java",
+      "name": "RunServer",
+      "request": "launch",
+      "mainClass": "Server.RunServer",
+      "projectName": "CaroOnline_SocketJava_bb2410a3",
+      "preLaunchTask": "compileAll",
+      "args": []
+    },
+    {
+      "type": "java",
+      "name": "Run Server (with JDBC)",
+      "request": "launch",
+      "mainClass": "Server.RunServer",
+      "projectName": "CaroOnline_SocketJava_bb2410a3",
+      "classPaths": [
+        "${workspaceFolder}/bin",
+        "${workspaceFolder}/library/mysql-connector-j-8.0.33.jar"
+      ]
+    }
+  ]
+}

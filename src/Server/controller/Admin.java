@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package server.controller;
+package Server.controller;
 
+import Server.DB.Layers.BUS.GameMatchBUS;
+import Server.DB.Layers.BUS.PlayerBUS;
+import Server.DB.Layers.DTO.GameMatch;
+import Server.DB.Layers.DTO.Player;
+import Server.RunServer;
 import java.io.IOException;
-import server.RunServer;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import server.db.layers.BUS.GameMatchBUS;
-import server.db.layers.BUS.PlayerBUS;
-import server.db.layers.DTO.GameMatch;
-import server.db.layers.DTO.Player;
 
 /**
  *

@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package client.view.scene;
+package Client.view.scene;
 
-import client.RunClient;
-import client.model.ChatItem;
-import client.model.PlayerInGame;
-import client.view.helper.PlayerInRoomCustomRenderer;
+import Client.RunClient;
+import Client.model.ChatItem;
+import Client.model.PlayerInGame;
+import Client.view.helper.PlayerInRoomCustomRenderer;
 import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
-import shared.constant.Avatar;
+import Shared.constant.Avatar;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -24,8 +24,8 @@ import javax.swing.JButton;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.text.DefaultCaret;
-import shared.helper.CountDownTimer;
-import shared.helper.CustumDateTimeFormatter;
+import Shared.helper.CountDownTimer;
+import Shared.helper.CustumDateTimeFormatter;
 
 /**
  *

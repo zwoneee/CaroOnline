@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package server.game.caro;
+package Server.game.caro;
 
-import shared.helper.CountDownTimer;
+import Shared.helper.CountDownTimer;
 import java.util.ArrayList;
-import shared.helper.Line;
-import shared.helper.Point;
-import server.game.GameLogic;
+import Shared.helper.Line;
+import Shared.helper.Point;
+import Server.game.GameLogic;
 
 /**
  *

@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package server.game.cotuong;
+package Server.game.cotuong;
 
-import server.game.GameLogic;
+import Server.game.GameLogic;
 
 /**
  *

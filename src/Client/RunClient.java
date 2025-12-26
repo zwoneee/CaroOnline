@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package client;
+package Client;
 
-import client.controller.SocketHandler;
-import client.view.helper.LookAndFeel;
-import client.view.scene.ChangePassword;
-import client.view.scene.ConnectServer;
-import client.view.scene.InGame;
-import client.view.scene.Login;
-import client.view.scene.MainMenu;
-import client.view.scene.Profile;
-import client.view.scene.Signup;
+import Client.controller.SocketHandler;
+import Client.view.helper.LookAndFeel;
+import Client.view.scene.ChangePassword;
+import Client.view.scene.ConnectServer;
+import Client.view.scene.InGame;
+import Client.view.scene.Login;
+import Client.view.scene.MainMenu;
+import Client.view.scene.Profile;
+import Client.view.scene.Signup;
 
 /**
  *

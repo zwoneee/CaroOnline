@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package client.view.helper;
+package Client.view.helper;
 
-import client.RunClient;
+import Client.RunClient;
 import java.awt.Component;
 import java.awt.Container;
 import javax.swing.UIManager;

@@ -1,28 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package server;
+package Server;
 
-import server.controller.Admin;
-import server.controller.Client;
-import server.controller.ClientManager;
-import server.controller.RoomManager;
+import Server.controller.Admin;
+import Server.controller.Client;
+import Server.controller.ClientManager;
+import Server.controller.RoomManager;
+import Shared.security.RSA;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.URL;
+import java.net.URLClassLoader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import shared.security.RSA;
 
-/**
- *
- * @author Hoang Tran < hoang at 99.hoangtran@gmail.com >
- */
 public class RunServer {
 
     public static volatile ClientManager clientManager;
@@ -88,6 +83,24 @@ public class RunServer {
     }
 
     public static void main(String[] args) {
+        // Load MySQL JDBC driver from library folder dynamically
+        try {
+            String libPath = "library/mysql-connector-j-8.0.33.jar";
+            if (Files.exists(Paths.get(libPath))) {
+                URL jarUrl = Paths.get(libPath).toAbsolutePath().toUri().toURL();
+                URLClassLoader classLoader = new URLClassLoader(new URL[]{jarUrl}, ClassLoader.getSystemClassLoader());
+                
+                // Load and register driver class explicitly
+                Class.forName("com.mysql.cj.jdbc.Driver", true, classLoader);
+                System.out.println("✓ Loaded JDBC driver from: " + libPath);
+            } else {
+                System.err.println("⚠ Warning: JDBC jar not found at " + libPath);
+            }
+        } catch (Exception e) {
+            System.err.println("⚠ Warning: Could not load JDBC jar: " + e.getMessage());
+            e.printStackTrace();
+        }
+        
         new RunServer();
     }
 }

@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package client.view.scene;
+package Client.view.scene;
 
-import client.RunClient;
-import client.model.ProfileData;
-import client.view.helper.Validation;
+import Client.RunClient;
+import Client.model.ProfileData;
+import Client.view.helper.Validation;
 import java.util.HashMap;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
-import shared.constant.Avatar;
+import Shared.constant.Avatar;
 
 /**
  *
